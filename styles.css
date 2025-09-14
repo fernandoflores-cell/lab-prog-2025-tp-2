@@ -27,6 +27,27 @@ a {
   color: black;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.nav-left-section {
+  width: 200px;
+}
+
+.nav-middle-section {
+  flex: 1;
+}
+
+.nav-right-section {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
 .item {
   border: none;
   display: inline-block;
@@ -52,16 +73,18 @@ a {
   vertical-align: middle;
   width: 30px;
   border-radius: 15px;
+  margin-left: 5px;
 }
 
 .nav-input {
-  margin-left: 100px;
-  margin-right: 200px;
   width: 350px;
+  margin-right: 0px;
+}
+
+.nav-button-search {
+  margin: 0px;
 }
 
 .nav-menu {
   color: #e7f2ef;
-  display: inline-block;
-  margin-right: 30px;
 }
