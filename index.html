@@ -4,19 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Home</title>
   </head>
   <body>
     <header>
       <nav>
-        <a class="nav-logo" href="index.html"
-          ><img
-            class="nav-logo-image"
-            src="img/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg"
-            alt=""
-        /></a>
-        <input class="nav-input" type="text" />
-        <div class="nav-menu">
+        <div class="nav-left-section">
+          <a class="nav-logo" href="index.html"
+            ><img
+              class="nav-logo-image"
+              src="img/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg"
+              alt=""
+          /></a>
+        </div>
+        <div class="nav-middle-section">
+          <input class="nav-input" type="text" placeholder="Buscar productos" />
+          <button class="nav-button-search">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="nav-right-section">
           <a class="nav-menu nav-crear-cuenta" href="">Crear cuenta</a>
           <a class="nav-menu nav-ingresar" href="">Ingresar</a>
           <a class="nav-menu nav-carrito" href="">Carrito</a>
