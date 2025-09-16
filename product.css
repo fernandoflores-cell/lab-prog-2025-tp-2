@@ -1,0 +1,26 @@
+.item-background {
+  background-color: #a1c2bd;
+  display: flex;
+  border-radius: 2px;
+  width: 96%;
+  margin: 2%;
+}
+
+.item-left-side {
+  width: 70%;
+}
+.item-right-side {
+  flex: 1;
+}
+.item-gallery {
+  margin: 5px;
+}
+.item-basic-info {
+  margin: 2px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.item-detailed-info {
+}
+.recommendations {
+}
