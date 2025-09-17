@@ -9,18 +9,77 @@
 .item-left-side {
   width: 70%;
 }
+
 .item-right-side {
   flex: 1;
 }
+
 .item-gallery {
   margin: 5px;
+  display: flex;
+  flex-direction: row;
 }
+
 .item-basic-info {
   margin: 2px;
   border: 1px solid gray;
   border-radius: 5px;
 }
+
 .item-detailed-info {
 }
+
 .recommendations {
+}
+
+.gallery-buttons {
+  width: 50px;
+}
+
+.gallery-image {
+  flex: 1;
+}
+
+.gallery-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: white;
+  padding: 2px;
+  margin: 3px;
+  margin-bottom: 0px;
+}
+
+.gallery-button:hover {
+  border: 2px solid blue;
+  padding: 1px;
+}
+
+.button-comprar-ahora,
+.button-agregar-al-carrito {
+  width: 90%;
+  margin-left: 5%;
+  height: 35px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.button-comprar-ahora {
+  background-color: #19183b;
+  color: white;
+}
+
+.button-comprar-ahora:hover {
+  background-color: #101025;
+}
+
+.button-agregar-al-carrito {
+  background-color: #708993;
+  color: black;
+}
+
+.button-agregar-al-carrito:hover {
+  background-color: #5b6f77;
 }
