@@ -35,17 +35,17 @@ nav {
 }
 
 .nav-left-section {
-  width: 200px;
+  flex: 1;
 }
 
 .nav-middle-section {
-  flex: 1;
+  flex: 2;
 }
 
 .nav-right-section {
   display: flex;
-  justify-content: space-between;
-  width: 220px;
+  justify-content: space-around;
+  flex: 1;
 }
 
 .nav-logo-image {
@@ -56,7 +56,7 @@ nav {
 }
 
 .nav-input {
-  width: 350px;
+  width: 65%;
   margin-right: 0px;
 }
 
