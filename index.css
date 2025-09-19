@@ -18,3 +18,21 @@
 .item:hover {
   cursor: pointer;
 }
+
+.section-products {
+  background-color: #708993;
+  width: 90%;
+  margin-left: 4%;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.section-title {
+  margin-top: 0px;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
