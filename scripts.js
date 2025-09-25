@@ -13,7 +13,7 @@ const obtenerProductos = async () => {
     //le agregamos los estilos
     a.classList.add("item", "fade");
     a.href = "product.html";
-    a.target = "_blank";
+    //a.target = "_blank";
 
     //imagen del producto
     const img = document.createElement("img");
