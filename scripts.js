@@ -41,5 +41,15 @@ const obtenerProductos = async () => {
     contInfo.appendChild(nombreProducto);
     contInfo.appendChild(nombrePrecio);
   });
-  return;
+};
+
+const estilarPlataformaSeleccionada = () => {
+  const botones = document.querySelectorAll(".plataform-button");
+
+  botones.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      botones.forEach((b) => b.classList.remove("active"));
+      boton.classList.add("active");
+    });
+  });
 };

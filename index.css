@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -23,11 +23,11 @@
   object-fit: cover;
 }
 
-.item-info{
+.item-info {
   display: flex;
   flex-direction: column;
 }
-.item-info p{
+.item-info p {
   word-wrap: break-word;
 }
 
@@ -52,13 +52,45 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
-  gap:10px
+  gap: 10px;
 }
 
 .fade {
   animation-name: fadeIn_y_traslacionY;
   animation-timing-function: ease-out;
   animation-duration: 1s;
+}
+
+.plataform-button-group {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 40%;
+  margin-bottom: 25px;
+  padding: 8px;
+  background-color: #3b3831;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+}
+.plataform-button {
+  flex: 1;
+  background-color: #3b3831;
+  margin: 1px;
+  border: none;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.plataform-button:hover {
+  background-color: #504e4a;
+}
+
+.plataform-button.active {
+  flex: 1;
+  background-color: #5d7bcc;
+  margin: 1px;
+  border: none;
+  border-radius: 100px;
 }
 /*
 keyframe permite definir animaciones
@@ -68,11 +100,11 @@ la duracion de la animacion esta difinida por animation-duration
 
 @keyframes fadeIn_y_traslacionY {
   0% {
-    opacity: 0;           
-    transform: translateY(50px); 
+    opacity: 0;
+    transform: translateY(50px);
   }
   100% {
-    opacity: 1;           
-    transform: translateY(0);    
+    opacity: 1;
+    transform: translateY(0);
   }
 }
