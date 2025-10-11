@@ -41,6 +41,10 @@ nav {
   height: 40px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .nav-left-section {
   flex: 1;
 }

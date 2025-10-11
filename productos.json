@@ -1,47 +1,56 @@
 [
   {
+    "id": "0",
     "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
-    "precio": "72.429",
+    "precio": 72429,
     "image": "img/Libros.webp"
   },
   {
+    "id": "1",
     "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
-    "precio": "107.460",
+    "precio": 107460,
     "image": "img/M2.webp"
   },
   {
+    "id": "2",
     "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
-    "precio": "5.644.999",
+    "precio": 5644999,
     "image": "img/5090.webp"
   },
   {
+    "id": "3",
     "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
-    "precio": "72.429",
+    "precio": 72429,
     "image": "img/Libros.webp"
   },
   {
+    "id": "4",
     "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
-    "precio": "107.460",
+    "precio": 107460,
     "image": "img/M2.webp"
   },
   {
+    "id": "5",
     "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
-    "precio": "5.644.999",
+    "precio": 5644999,
     "image": "img/5090.webp"
   },
   {
+    "id": "6",
     "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
-    "precio": "72.429",
+    "precio": 72429,
     "image": "img/Libros.webp"
   },
   {
+    "id": "7",
     "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
-    "precio": "107.460",
+    "precio": 107460,
     "image": "img/M2.webp"
   },
   {
+    "id": "8",
     "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
-    "precio": "5.644.999",
+    "precio": 5644999,
     "image": "img/5090.webp"
   }
 ]
