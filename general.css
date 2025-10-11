@@ -38,7 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 80px;
 }
 
 .nav-left-section {
@@ -48,6 +48,7 @@ nav {
 .nav-middle-section {
   display: flex;
   flex: 2;
+  height: 45%;
 }
 
 .nav-right-section {
@@ -65,13 +66,18 @@ nav {
 }
 
 .nav-input {
-  height: 24px;
   width: 65%;
   margin-right: 0px;
+  border-radius: 8px 0px 0px 8px;
+  border: none;
 }
 
 .nav-button-search {
   margin: 0px;
+  width: 40px;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  background-color: #e7f2ef;
 }
 
 .nav-menu {
