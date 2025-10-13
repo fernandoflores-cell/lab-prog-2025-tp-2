@@ -25,9 +25,9 @@
     <main>
       <!--Contenido de prueba inicio-->
         <div class="plataform-button-group">
-          <button class="plataform-button">Steam</button>
-          <button class="plataform-button">Playstation</button>
-          <button class="plataform-button">Xbox</button>
+          <button class="plataform-button" id="pc">Steam</button>
+          <button class="plataform-button" id="playstation">Playstation</button>
+          <button class="plataform-button" id="xbox">Xbox</button>
         </div>
         <div  id="productos" class="section-content">
 
@@ -36,7 +36,7 @@
     </main>
     <script>
       obtenerProductos();
-      estilarPlataformaSeleccionada();
+      filtrarPorPlataforma();
     </script>
   </body>
 </html>

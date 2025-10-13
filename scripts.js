@@ -14,6 +14,7 @@ const obtenerProductos = async () => {
     a.classList.add("item", "fade");
     a.href = "product.html";
     a.target = "_blank";
+    a.setAttribute("data-plataforma", producto.plataforma);
 
     //imagen del producto
     const img = document.createElement("img");
@@ -43,13 +44,25 @@ const obtenerProductos = async () => {
   });
 };
 
-const estilarPlataformaSeleccionada = () => {
+const filtrarPorPlataforma = () => {
   const botones = document.querySelectorAll(".plataform-button");
-
   botones.forEach((boton) => {
+    //se añade el evento click a cada boton
     boton.addEventListener("click", () => {
+      //se estila el botones segun la plataforma seleccionada
       botones.forEach((b) => b.classList.remove("active"));
       boton.classList.add("active");
+      //luego se obtienen todos lo items
+      const items = document.querySelectorAll(".item");
+      //se desaparecen los item si no son de la plataforma seleccionada
+      items.forEach((item) => {
+        const plataforma = item.getAttribute("data-plataforma");
+        if (plataforma === boton.id) {
+          item.classList.remove("vanish");
+        } else {
+          item.classList.add("vanish");
+        }
+      });
     });
   });
 };
