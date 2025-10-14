@@ -68,15 +68,15 @@
   width: 40%;
   margin-bottom: 25px;
   padding: 8px;
-  background-color: #3b3831;
+  background-color: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 100px;
 }
 .plataform-button {
   flex: 1;
-  background-color: #3b3831;
+  background-color: #ffffff;
   margin: 1px;
-  border: none;
+  border: 1px solid #fcd3d3c6;
   border-radius: 100px;
   transition: all 0.3s ease;
 }
