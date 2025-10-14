@@ -9,7 +9,7 @@ body {
   background-color: #e7f2ef;
   height: 100vh;
   margin: 0px;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
 }
 
 main {
-  flex:1;
+  flex: 1;
   justify-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -39,6 +39,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .nav-left-section {
@@ -86,4 +90,28 @@ nav {
 
 .nav-carrito-icon {
   width: 25px;
+}
+
+.page-mode-button {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: none;
+  border-radius: 20px;
+  transition: background-color 250ms;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-mode-button:hover {
+  cursor: pointer;
+}
+.page-mode-button:active {
+  background-color: black;
+}
+
+.nav-dark-mode-icon {
+  width: 25px;
+  height: 25px;
 }

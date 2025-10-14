@@ -1,53 +1,62 @@
 [
   {
+    "id": "0",
     "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
     "precio": "72.429",
     "image": "img/Libros.webp",
     "plataforma":"pc"
   },
   {
+    "id": "1",
     "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
     "precio": "107.460",
     "image": "img/M2.webp",
     "plataforma":"playstation"
   },
   {
+    "id": "2",
     "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
     "precio": "5.644.999",
     "image": "img/5090.webp",
     "plataforma":"pc"
   },
   {
+    "id": "3",
     "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
     "precio": "72.429",
     "image": "img/Libros.webp",
     "plataforma":"playstation"
   },
   {
+    "id": "4",
     "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
     "precio": "107.460",
     "image": "img/M2.webp",
     "plataforma":"playstation"
   },
   {
+    "id": "5",
     "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
     "precio": "5.644.999",
     "image": "img/5090.webp",
     "plataforma":"playstation"
   },
   {
+    "id": "6",
     "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
     "precio": "72.429",
     "image": "img/Libros.webp",
     "plataforma":"pc"
   },
   {
+    "id": "7",
     "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
     "precio": "107.460",
     "image": "img/M2.webp",
     "plataforma":"xbox"
   },
   {
+    "id": "8",
     "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
     "precio": "5.644.999",
     "image": "img/5090.webp",
