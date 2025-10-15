@@ -1,3 +1,9 @@
+let productos, carrito;
+const obtenerProductos = async () => {
+  //obtiene los item del archivo y luego lo parsea de json (aca luego va la api del backend)
+  productos = await fetch("items.json").then((res) => res.json());
+  carrito = await fetch("carrito.json").then((res) => res.json());
+};
 const obtenerItems = async () => {
   //obtiene los item del archivo y luego lo parsea de json (aca luego va la api del backend)
   const items = await fetch("items.json").then((res) => res.json());

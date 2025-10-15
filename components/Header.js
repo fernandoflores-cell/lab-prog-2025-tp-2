@@ -19,7 +19,7 @@ class Header extends HTMLElement {
         <div class="nav-right-section">
           <a class="nav-menu nav-crear-cuenta" href="">Crear cuenta</a>
           <a class="nav-menu nav-ingresar" href="">Ingresar</a>
-          <a class="nav-menu nav-carrito" href=""
+          <a class="nav-menu nav-carrito" href="shopping-cart.html"
             ><img
               class="nav-carrito-icon"
               src="icons/shopping-cart-white.svg"
