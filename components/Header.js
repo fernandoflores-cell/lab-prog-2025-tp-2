@@ -11,10 +11,11 @@ class Header extends HTMLElement {
           /></a>
         </div>
         <div class="nav-middle-section">
-          <input class="nav-input" type="text" placeholder="Buscar productos" />
+          <input class="nav-input" id="nav-input" type="text" placeholder="Buscar productos" />
           <button class="nav-button-search">
             <i class="fa fa-search"></i>
           </button>
+          <div class="search-results-container" id="search-results-container"></div>
         </div>
         <div class="nav-right-section">
           <a class="nav-menu nav-crear-cuenta" href="">Crear cuenta</a>

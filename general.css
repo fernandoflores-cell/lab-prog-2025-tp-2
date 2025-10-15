@@ -15,6 +15,9 @@ body {
 header {
   background-color: #19183b;
   color: #e7f2ef;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 main {
@@ -39,6 +42,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  width: 70%;
 }
 
 button:hover {
@@ -50,16 +54,17 @@ button:hover {
 }
 
 .nav-middle-section {
+  position: relative;
   display: flex;
   flex: 2;
   height: 45%;
 }
 
 .nav-right-section {
+  flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex: 1;
 }
 
 .nav-logo-image {
@@ -70,7 +75,7 @@ button:hover {
 }
 
 .nav-input {
-  width: 65%;
+  width: 100%;
   margin-right: 0px;
   border-radius: 8px 0px 0px 8px;
   border: none;
@@ -114,4 +119,51 @@ button:hover {
 .nav-dark-mode-icon {
   width: 25px;
   height: 25px;
+}
+
+.search-results-container {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+/* Cada resultado */
+.result-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  background-color: #e7f2ef;
+}
+
+.result-item:hover {
+  background: #f3f3f3;
+}
+
+.result-image {
+  width: 100px;
+  height: 80px;
+  margin-right: 12px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.result-name {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
