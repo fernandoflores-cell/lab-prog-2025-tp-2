@@ -115,3 +115,30 @@ button:hover {
   width: 25px;
   height: 25px;
 }
+.cantidad-cajita{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fill,minmax(72px,1fr)); /* tantas columnas como entren de minimo 72px cada una */
+  gap:8px;
+  margin-top:8px
+}
+/* cada boton como se ve */
+.estilo-btn{
+  display:flex; /* para alinear el texto */
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:10px;border:1px solid #cfd6df;
+  border-radius:8px;background:#fff;
+  cursor:pointer;
+  user-select:none; /* para no seleccionar texto */
+  font-weight:600
+}
+.estilo-btn:hover{
+  border-color:#5d7bcc;
+  box-shadow:0 2px 8px rgba(93,123,204,.25)}
+.estilo-btn[aria-selected="true"]{
+  outline:2px solid #5d7bcc;
+  border-color:#5d7bcc;
+  background:linear-gradient(180deg,#f6f8ff,#fff)
+}

@@ -1,65 +1,149 @@
 [
   {
     "id": "0",
-    "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
-    "precio": "72.429",
-    "image": "img/Libros.webp",
+    "nombre": "Tarjeta de regalo Steam Global 5 USD",
+    "precio": "7500",
+    "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "1",
-    "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
-    "precio": "107.460",
-    "image": "img/M2.webp",
+    "nombre": "Tarjeta de regalo PlayStation Global 5 USD",
+    "precio": "7500",
+    "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "2",
-    "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
-    "precio": "5.644.999",
-    "image": "img/5090.webp",
-    "plataforma":"pc"
+    "nombre": "Tarjeta de regalo Xbox global 5 USD",
+    "precio": "7500",
+    "image": "img/xbox.webp",
+    "plataforma":"xbox"
   },
   {
     "id": "3",
-    "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
-    "precio": "72.429",
-    "image": "img/Libros.webp",
-    "plataforma":"playstation"
+    "nombre": "Tarjeta de regalo Steam Global 10 USD",
+   "precio": "15000",
+    "image": "img/steam.jpg",
+    "plataforma":"pc"
   },
   {
     "id": "4",
-    "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
-    "precio": "107.460",
-    "image": "img/M2.webp",
+    "nombre": "Tarjeta de regalo PlayStation Global 10 USD",
+    "precio": "15000",
+    "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "5",
-    "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
-    "precio": "5.644.999",
-    "image": "img/5090.webp",
-    "plataforma":"playstation"
+    "nombre": "Tarjeta de regalo Xbox global 10 USD",
+   "precio": "15000",
+    "image": "img/xbox.webp",
+    "plataforma":"xbox"
   },
   {
     "id": "6",
-    "nombre": "Estuche Trilogía Nacidos De La Bruma 3 Volúmenes",
-    "precio": "72.429",
-    "image": "img/Libros.webp",
+    "nombre": "Tarjeta de regalo Steam Global 15 USD",
+   "precio": "22500",
+    "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "7",
-    "nombre": "Disco Ssd 1TB Sn350 M.2 Nvme Green Western Digital",
-    "precio": "107.460",
-    "image": "img/M2.webp",
-    "plataforma":"xbox"
+    "nombre": "Tarjeta de regalo PlayStation Global 15 USD",
+   "precio": "22500",
+    "image": "img/playstation.webp",
+    "plataforma":"playstation"
   },
   {
     "id": "8",
-    "nombre": "Placa De Video GeForce RTX 5090 32Gb Msi Gaming Trio Oc",
-    "precio": "5.644.999",
-    "image": "img/5090.webp",
+    "nombre": "Tarjeta de regalo Xbox global 15 USD",
+   "precio": "22500",
+    "image": "img/xbox.webp",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "9",
+    "nombre": "Tarjeta de regalo Steam Global 20 USD",
+    "precio": "30000",
+    "image": "img/steam.jpg",
+    "plataforma":"pc"
+  },
+  {
+    "id": "10",
+    "nombre": "Tarjeta de regalo PlayStation Global 20 USD",
+    "precio": "30000",
+    "image": "img/playstation.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "11",
+    "nombre": "Tarjeta de regalo Xbox global 20 USD",
+    "precio": "30000",
+    "image": "img/xbox.webp",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "12",
+    "nombre": "Tarjeta de regalo Steam Global 25 USD",
+    "precio": "37500",
+    "image": "img/steam.jpg",
+    "plataforma":"pc"
+  },
+  {
+    "id": "13",
+    "nombre": "Tarjeta de regalo PlayStation Global 25 USD",
+    "precio": "37500",
+    "image": "img/playstation.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "14",
+    "nombre": "Tarjeta de regalo Xbox global 25 USD",
+    "precio": "37500",
+    "image": "img/xbox.webp",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "15",
+    "nombre": "Tarjeta de regalo Steam Global 50 USD",
+    "precio": "75000",
+    "image": "img/steam.jpg",
+    "plataforma":"pc"
+  },
+  {
+    "id": "16",
+    "nombre": "Tarjeta de regalo PlayStation Global 50 USD",
+    "precio": "75000",
+    "image": "img/playstation.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "17",
+    "nombre": "Tarjeta de regalo Xbox global 50 USD",
+    "precio": "75000",
+    "image": "img/xbox.webp",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "18",
+    "nombre": "Tarjeta de regalo Steam Global 100 USD",
+    "precio": "150000",
+    "image": "img/steam.jpg",
+    "plataforma":"pc"
+  },
+  {
+    "id": "19",
+    "nombre": "Tarjeta de regalo PlayStation Global 100 USD",
+    "precio": "150000",
+    "image": "img/playstation.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "20",
+    "nombre": "Tarjeta de regalo Xbox global 100 USD",
+    "precio": "150000",
+    "image": "img/xbox.webp",
     "plataforma":"xbox"
   }
 ]
