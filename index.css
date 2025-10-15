@@ -17,7 +17,7 @@
 
 .item-imagen {
   width: 100%;
-  min-height: 250px;
+  min-height: 2px;
   border-radius: 4px;
   object-fit: cover;
 }
