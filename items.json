@@ -402,7 +402,7 @@
   {
     "id": "85",
     "nombre": "PEAK Steam",
-    "precio": "28000",
+    "precio": "5600",
     "image": "img/peak.webp",
     "plataforma": "pc"
   },
@@ -606,7 +606,7 @@
     "id": "104",
     "nombre": "Resident Evil 8 Village Steam",
     "precio": "40600",
-    "image": "img/re2.avif",
+    "image": "img/re8.avif",
     "plataforma": "pc"
   },
   {
@@ -774,7 +774,7 @@
     "id": "106",
     "nombre": "Resident Evil 8 Village PS5",
     "precio": "40600",
-    "image": "img/re2.avif",
+    "image": "img/re8.avif",
     "plataforma": "playstation"
   },
   {
@@ -788,7 +788,7 @@
     "id": "105",
     "nombre": "Resident Evil 8 Village Xbox",
     "precio": "40600",
-    "image": "img/re2.avif",
+    "image": "img/re8.avif",
     "plataforma": "xbox"
   }
 
