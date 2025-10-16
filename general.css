@@ -151,8 +151,8 @@ button:hover {
 }
 
 .result-image {
-  width: 100px;
-  height: 80px;
+  width: 75px;
+  height: 100px;
   margin-right: 12px;
   border-radius: 6px;
   object-fit: cover;
