@@ -153,7 +153,7 @@ const listarProductosCarrito = () => {
   const pTotal = document.createElement("p");
   const buttonBuy = document.createElement("button");
 
-  //pTotal.classList.add("");
+  pTotal.classList.add("precioTotal");
   pTotal.id = "precioTotal";
 
   pTotal.textContent = "Total: \n$" + precioTotal;
