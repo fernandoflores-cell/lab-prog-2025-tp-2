@@ -1,149 +1,816 @@
 [
   {
     "id": "0",
-    "nombre": "Tarjeta de regalo Steam Global 5 USD",
+    "nombre": "Tarjeta de regalo Steam 5 USD",
     "precio": "7500",
     "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "1",
-    "nombre": "Tarjeta de regalo PlayStation Global 5 USD",
+    "nombre": "Tarjeta de regalo PlayStation 5 USD",
     "precio": "7500",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "2",
-    "nombre": "Tarjeta de regalo Xbox global 5 USD",
+    "nombre": "Tarjeta de regalo Xbox 5 USD",
     "precio": "7500",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
   },
   {
     "id": "3",
-    "nombre": "Tarjeta de regalo Steam Global 10 USD",
-   "precio": "15000",
+    "nombre": "Tarjeta de regalo Steam 10 USD",
+    "precio": "15000",
     "image": "img/steam.jpg",
-    "plataforma":"pc"
+    "plataforma": "pc"
   },
   {
     "id": "4",
-    "nombre": "Tarjeta de regalo PlayStation Global 10 USD",
+    "nombre": "Tarjeta de regalo PlayStation 10 USD",
     "precio": "15000",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "5",
-    "nombre": "Tarjeta de regalo Xbox global 10 USD",
+    "nombre": "Tarjeta de regalo Xbox 10 USD",
    "precio": "15000",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
   },
   {
     "id": "6",
-    "nombre": "Tarjeta de regalo Steam Global 15 USD",
+    "nombre": "Tarjeta de regalo Steam 15 USD",
    "precio": "22500",
     "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "7",
-    "nombre": "Tarjeta de regalo PlayStation Global 15 USD",
+    "nombre": "Tarjeta de regalo PlayStation 15 USD",
    "precio": "22500",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "8",
-    "nombre": "Tarjeta de regalo Xbox global 15 USD",
+    "nombre": "Tarjeta de regalo Xbox 15 USD",
    "precio": "22500",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
   },
   {
     "id": "9",
-    "nombre": "Tarjeta de regalo Steam Global 20 USD",
+    "nombre": "Tarjeta de regalo Steam 20 USD",
     "precio": "30000",
     "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "10",
-    "nombre": "Tarjeta de regalo PlayStation Global 20 USD",
+    "nombre": "Tarjeta de regalo PlayStation 20 USD",
     "precio": "30000",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "11",
-    "nombre": "Tarjeta de regalo Xbox global 20 USD",
+    "nombre": "Tarjeta de regalo Xbox 20 USD",
     "precio": "30000",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
   },
   {
     "id": "12",
-    "nombre": "Tarjeta de regalo Steam Global 25 USD",
+    "nombre": "Tarjeta de regalo Steam 25 USD",
     "precio": "37500",
     "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "13",
-    "nombre": "Tarjeta de regalo PlayStation Global 25 USD",
+    "nombre": "Tarjeta de regalo PlayStation 25 USD",
     "precio": "37500",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "14",
-    "nombre": "Tarjeta de regalo Xbox global 25 USD",
+    "nombre": "Tarjeta de regalo Xbox 25 USD",
     "precio": "37500",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
   },
   {
     "id": "15",
-    "nombre": "Tarjeta de regalo Steam Global 50 USD",
+    "nombre": "Tarjeta de regalo Steam 50 USD",
     "precio": "75000",
     "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "16",
-    "nombre": "Tarjeta de regalo PlayStation Global 50 USD",
+    "nombre": "Tarjeta de regalo PlayStation 50 USD",
     "precio": "75000",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "17",
-    "nombre": "Tarjeta de regalo Xbox global 50 USD",
+    "nombre": "Tarjeta de regalo Xbox 50 USD",
     "precio": "75000",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
   },
   {
     "id": "18",
-    "nombre": "Tarjeta de regalo Steam Global 100 USD",
+    "nombre": "Tarjeta de regalo Steam 100 USD",
     "precio": "150000",
     "image": "img/steam.jpg",
     "plataforma":"pc"
   },
   {
     "id": "19",
-    "nombre": "Tarjeta de regalo PlayStation Global 100 USD",
+    "nombre": "Tarjeta de regalo PlayStation 100 USD",
     "precio": "150000",
     "image": "img/playstation.webp",
     "plataforma":"playstation"
   },
   {
     "id": "20",
-    "nombre": "Tarjeta de regalo Xbox global 100 USD",
+    "nombre": "Tarjeta de regalo Xbox 100 USD",
     "precio": "150000",
     "image": "img/xbox.webp",
     "plataforma":"xbox"
+  },
+  {
+    "id": "21",
+    "nombre": "Elden Ring Steam",
+    "precio": "67200",
+    "image": "img/eldenring.avif",
+    "plataforma":"pc"
   }
+  ,
+  {
+    "id": "22",
+    "nombre": "Dark Souls I Steam",
+    "precio": "44800",
+    "image": "img/ds1.avif",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "23",
+    "nombre": "Dark Souls II Steam",
+    "precio": "44800",
+    "image": "img/ds2.avif",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "24",
+    "nombre": "Dark Souls III Steam",
+    "precio": "64500",
+    "image": "img/ds3.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "25",
+    "nombre": "Factorio Steam",
+    "precio": "23800",
+    "image": "img/factorio.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "26",
+    "nombre": "Alan Wake Remastered PS5",
+    "precio": "28000",
+    "image": "img/alanwake1.jpg",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "27",
+    "nombre": "Alan Wake 2 PS5",
+    "precio": "84000",
+    "image": "img/alanwake2.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "28",
+    "nombre": "Death Stranding 2 PS5",
+    "precio": "98000",
+    "image": "img/deathstrading2ps5.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "29",
+    "nombre": "Elden Ring PS5",
+    "precio": "67200",
+    "image": "img/eldenring.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "30",
+    "nombre": "Among Us Steam",
+    "precio": "4200",
+    "image": "img/au.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "31",
+    "nombre": "Battefield 6 Steam",
+    "precio": "98000",
+    "image": "img/b6.avif",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "32",
+    "nombre": "Battefield 6 Xbox",
+    "precio": "98000",
+    "image": "img/b6.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "33",
+    "nombre": "Battefield 6 PS5",
+    "precio": "98000",
+    "image": "img/b6.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "34",
+    "nombre": "Bioshock Steam",
+    "precio": "28000",
+    "image": "img/bioshock.webp",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "35",
+    "nombre": "Bioshock Infinite Steam",
+    "precio": "42000",
+    "image": "img/bioshockinf.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "36",
+    "nombre": "Call of duty Black Ops 2 Steam",
+    "precio": "84000",
+    "image": "img/codbo2.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "37",
+    "nombre": "Call of duty Black Ops 3 Steam",
+    "precio": "84000",
+    "image": "img/codbo3.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "38",
+    "nombre": "Call of duty Modern Warfare 3 Steam",
+    "precio": "56000",
+    "image": "img/codmw3.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "39",
+    "nombre": "CupHead Steam",
+    "precio": "28000",
+    "image": "img/cuphead.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "40",
+    "nombre": "CyberPunk 2077 Steam",
+    "precio": "63000",
+    "image": "img/cyberpunk.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "41",
+    "nombre": "CyberPunk 2077 Xbox",
+    "precio": "63000",
+    "image": "img/cyberpunk.webp",
+    "plataforma":"xbox"
+  }
+  ,
+  {
+    "id": "42",
+    "nombre": "CyberPunk 2077 PS5",
+    "precio": "63000",
+    "image": "img/cyberpunk.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "43",
+    "nombre": "Death Strading Steam",
+    "precio": "26600",
+    "image": "img/deathstranding.avif",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "44",
+    "nombre": "Death Strading Xbox",
+    "precio": "26600",
+    "image": "img/deathstranding.avif",
+    "plataforma":"xbox"
+  }
+  ,
+  {
+    "id": "45",
+    "nombre": "Death Strading PS5",
+    "precio": "26600",
+    "image": "img/deathstranding.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "46",
+    "nombre": "Dying Light Steam",
+    "precio": "25200",
+    "image": "img/dl1.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "47",
+    "nombre": "Dying Light 2 Steam",
+    "precio": "56000",
+    "image": "img/dl2.avif",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "48",
+    "nombre": "Dying Light 2 Xbox",
+    "precio": "56000",
+    "image": "img/dl2.avif",
+    "plataforma":"xbox"
+  }
+  ,
+  {
+    "id": "49",
+    "nombre": "Dying Light 2 PS5",
+    "precio": "56000",
+    "image": "img/dl2.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "50",
+    "nombre": "Doom Eternal Steam",
+    "precio": "33600",
+    "image": "img/doometernal.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "51",
+    "nombre": "Doom Eternal Xbox",
+    "precio": "33600",
+    "image": "img/doometernal.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "52",
+    "nombre": "Doom Eternal PS5",
+    "precio": "33600",
+    "image": "img/doometernal.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "53",
+    "nombre": "Clair Obscur: Expedition 33 Steam",
+    "precio": "49000",
+    "image": "img/expedition.webp",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "54",
+    "nombre": "Clair Obscur: Expedition 33 Xbox",
+    "precio": "49000",
+    "image": "img/expedition.webp",
+    "plataforma":"xbox"
+  }
+  ,
+  {
+    "id": "55",
+    "nombre": "Clair Obscur: Expedition 33 PS5",
+    "precio": "49000",
+    "image": "img/expedition.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "56",
+    "nombre": "Fifa 2026 Steam",
+    "precio": "98000",
+    "image": "img/fifa26.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "57",
+    "nombre": "Fifa 2026 Xbox",
+    "precio": "98000",
+    "image": "img/fifa26.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "58",
+    "nombre": "Fifa 2026 PS5",
+    "precio": "98000",
+    "image": "img/fifa26.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "59",
+    "nombre": "God Of War Steam",
+    "precio": "70000",
+    "image": "img/gow.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "60",
+    "nombre": "God Of War Ragnarok Steam",
+    "precio": "70000",
+    "image": "img/gowr.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "61",
+    "nombre": "God Of War PS5",
+    "precio": "70000",
+    "image": "img/gow.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "62",
+    "nombre": "God Of War Ragnarok PS5",
+    "precio": "70000",
+    "image": "img/gowr.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "63",
+    "nombre": "Grand Theft Auto V Steam",
+    "precio": "42000",
+    "image": "img/gta5.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "64",
+    "nombre": "Grand Theft Auto V Xbox",
+    "precio": "42000",
+    "image": "img/gta5.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "65",
+    "nombre": "Grand Theft Auto V PS5",
+    "precio": "42000",
+    "image": "img/gta5.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "66",
+    "nombre": "Grand Theft Auto San Andreas Steam",
+    "precio": "24000",
+    "image": "img/gtasa.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "67",
+    "nombre": "Grand Theft Auto San Andreas Xbox",
+    "precio": "24000",
+    "image": "img/gtasa.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "68",
+    "nombre": "Grand Theft Auto San Andreas PS5",
+    "precio": "24000",
+    "image": "img/gtasa.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "69",
+    "nombre": "Hades Steam",
+    "precio": "7000",
+    "image": "img/hades.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "70",
+    "nombre": "Hades Xbox",
+    "precio": "7000",
+    "image": "img/hades.webp",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "71",
+    "nombre": "Hades PS5",
+    "precio": "14000",
+    "image": "img/hades.webp",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "72",
+    "nombre": "Hades II Steam",
+    "precio": "21000",
+    "image": "img/hades2.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "73",
+    "nombre": "Halo 3 Xbox",
+    "precio": "7000",
+    "image": "img/halo3.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "74",
+    "nombre": "Halo Reach Xbox",
+    "precio": "12000",
+    "image": "img/haloreach.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "75",
+    "nombre": "Halo Infinite Xbox",
+    "precio": "21000",
+    "image": "img/haloinfinitexbox.webp",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "76",
+    "nombre": "Hollow Knight Steam",
+    "precio": "7000",
+    "image": "img/hn.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "77",
+    "nombre": "Hollow Knight: Silksong Steam",
+    "precio": "9800",
+    "image": "img/silksong.webp",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "78",
+    "nombre": "It Takes Two Steam",
+    "precio": "56000",
+    "image": "img/itTakesTwo.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "79",
+    "nombre": "It Takes Two Xbox",
+    "precio": "56000",
+    "image": "img/itTakesTwo.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "80",
+    "nombre": "It Takes Two PS5",
+    "precio": "56000",
+    "image": "img/itTakesTwo.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "81",
+    "nombre": "Left 4 Dead 2 Steam",
+    "precio": "8100",
+    "image": "img/l4f2.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "82",
+    "nombre": "Minecraft",
+    "precio": "28000",
+    "image": "img/minecraft.avif",
+    "plataforma":"pc"
+  }
+  ,
+  {
+    "id": "83",
+    "nombre": "Minecraft Xbox",
+    "precio": "28000",
+    "image": "img/minecraft.avif",
+    "plataforma":"xbox"
+  }
+  ,
+  {
+    "id": "84",
+    "nombre": "Minecraft PS5",
+    "precio": "28000",
+    "image": "img/minecraft.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "85",
+    "nombre": "PEAK Steam",
+    "precio": "28000",
+    "image": "img/peak.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "86",
+    "nombre": "Red Dead Redemption 2 Steam",
+    "precio": "84000",
+    "image": "img/rdr2.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "87",
+    "nombre": "Red Dead Redemption 2 Xbox",
+    "precio": "84000",
+    "image": "img/rdr2.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "88",
+    "nombre": "Red Dead Redemption 2 PS5",
+    "precio": "84000",
+    "image": "img/rdr2.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "89",
+    "nombre": "Resident Evil 2 Steam",
+    "precio": "40600",
+    "image": "img/re2.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "90",
+    "nombre": "Resident Evil 2 Xbox",
+    "precio": "40600",
+    "image": "img/re2.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "91",
+    "nombre": "Resident Evil 2 PS5",
+    "precio": "40600",
+    "image": "img/re2.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "92",
+    "nombre": "Resident Evil 3 Steam",
+    "precio": "40600",
+    "image": "img/re3.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "93",
+    "nombre": "Resident Evil 3 Xbox",
+    "precio": "40600",
+    "image": "img/re3.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "94",
+    "nombre": "Resident Evil 3 PS5",
+    "precio": "40600",
+    "image": "img/re3.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "95",
+    "nombre": "Resident Evil 4 Steam",
+    "precio": "40600",
+    "image": "img/re4.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "96",
+    "nombre": "Resident Evil 4 Xbox",
+    "precio": "40600",
+    "image": "img/re4.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "97",
+    "nombre": "Resident Evil 4 PS5",
+    "precio": "40600",
+    "image": "img/re4.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "98",
+    "nombre": "Resident Evil 5 Steam",
+    "precio": "21000",
+    "image": "img/re5.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "99",
+    "nombre": "Resident Evil 5 Xbox",
+    "precio": "21000",
+    "image": "img/re5.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "100",
+    "nombre": "Resident Evil 5 PS5",
+    "precio": "21000",
+    "image": "img/re5.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "101",
+    "nombre": "Resident Evil 7 Biohazard Steam",
+    "precio": "40600",
+    "image": "img/re7.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "102",
+    "nombre": "Resident Evil 7 Biohazard Xbox",
+    "precio": "40600",
+    "image": "img/re7.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "103",
+    "nombre": "Resident Evil 7 Biohazard PS5",
+    "precio": "40600",
+    "image": "img/re7.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "104",
+    "nombre": "Resident Evil 8 Village Steam",
+    "precio": "40600",
+    "image": "img/re2.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "105",
+    "nombre": "Resident Evil 8 Village Xbox",
+    "precio": "40600",
+    "image": "img/re2.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "106",
+    "nombre": "Resident Evil 8 Village PS5",
+    "precio": "40600",
+    "image": "img/re2.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "107",
+    "nombre": "R.E.P.O Steam",
+    "precio": "8100",
+    "image": "img/repo.webp",
+    "plataforma":"pc"
+  },
+  {
+    "id": "108",
+    "nombre": "Starfield Steam",
+    "precio": "58800",
+    "image": "img/starfield.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "109",
+    "nombre": "Starfield Xbox",
+    "precio": "58800",
+    "image": "img/starfield.avif",
+    "plataforma":"xbox"
+  },
+  {
+    "id": "110",
+    "nombre": "The Last Of Us Part I Steam",
+    "precio": "84000",
+    "image": "img/tlou1.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "111",
+    "nombre": "The Last Of Us Part I PS5",
+    "precio": "84000",
+    "image": "img/tlou1.avif",
+    "plataforma":"playstation"
+  },
+  {
+    "id": "112",
+    "nombre": "The Last Of Us Part II Steam",
+    "precio": "56000",
+    "image": "img/tlou2.avif",
+    "plataforma":"pc"
+  },
+  {
+    "id": "113",
+    "nombre": "The Last Of Us Part II PS5",
+    "precio": "56000",
+    "image": "img/tlou2.avif",
+    "plataforma":"playstation"
+  }
+  
 ]
