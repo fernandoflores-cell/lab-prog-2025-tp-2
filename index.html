@@ -16,6 +16,7 @@
     />
     <script src="scripts.js"></script>
     <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
     <title>Home</title>
   </head>
   <body>
@@ -27,12 +28,13 @@
           <button class="plataform-button pc" id="pc">PC</button>
           <button class="plataform-button playstation" id="playstation">Playstation</button>
           <button class="plataform-button xbox" id="xbox">Xbox</button>
-        </div>
+        </div> 
         <div  id="items" class="section-content">
 
         </div>
       <!--Contenido de prueba fin-->
     </main>
+    <app-footer></app-footer>
     <script>
       obtenerItems();
       filtrarPorPlataforma();

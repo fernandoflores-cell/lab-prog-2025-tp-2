@@ -28,8 +28,10 @@ main {
 }
 
 footer {
-  background-color: #708993;
-  padding: 10px;
+  background-color: #19183b;
+  color: #e7f2ef;
+  padding: 40px 20px 20px;
+  margin-top: auto;
 }
 
 a {
@@ -129,13 +131,12 @@ button:hover {
   right: 0;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   max-height: 250px;
   overflow-y: auto;
   z-index: 999;
 }
 
-/* Cada resultado */
 .result-item {
   display: flex;
   align-items: center;
@@ -156,7 +157,6 @@ button:hover {
   border-radius: 6px;
   object-fit: cover;
   flex-shrink: 0;
-  box-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
 
 .result-name {
@@ -167,30 +167,89 @@ button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cantidad-cajita{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fill,minmax(72px,1fr)); /* tantas columnas como entren de minimo 72px cada una */
-  gap:8px;
-  margin-top:8px
+.cantidad-cajita {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(72px, 1fr)
+  ); /* tantas columnas como entren de minimo 72px cada una */
+  gap: 8px;
+  margin-top: 8px;
 }
 /* cada boton como se ve */
-.estilo-btn{
-  display:flex; /* para alinear el texto */
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  padding:10px;border:1px solid #cfd6df;
-  border-radius:8px;background:#fff;
-  cursor:pointer;
-  user-select:none; /* para no seleccionar texto */
-  font-weight:600
+.estilo-btn {
+  display: flex; /* para alinear el texto */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #cfd6df;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  user-select: none; /* para no seleccionar texto */
+  font-weight: 600;
 }
-.estilo-btn:hover{
-  border-color:#5d7bcc;
-  box-shadow:0 2px 8px rgba(93,123,204,.25)}
-.estilo-btn[aria-selected="true"]{
-  outline:2px solid #5d7bcc;
-  border-color:#5d7bcc;
-  background:linear-gradient(180deg,#f6f8ff,#fff)
+.estilo-btn:hover {
+  border-color: #5d7bcc;
+  box-shadow: 0 2px 8px rgba(93, 123, 204, 0.25);
+}
+.estilo-btn[aria-selected="true"] {
+  outline: 2px solid #5d7bcc;
+  border-color: #5d7bcc;
+  background: linear-gradient(180deg, #f6f8ff, #fff);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.footer-section-title {
+  color: #5d7bcc;
+  font-size: 1.5rem;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+}
+
+.footer-section p {
+  color: #e7f2ef;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  color: #e7f2ef;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.footer-section ul li:hover {
+  transform: translateX(5px);
+}
+
+.footer-section a {
+  color: #e7f2ef;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #5d7bcc;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #e7f2ef;
 }
