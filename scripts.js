@@ -346,7 +346,7 @@ const filtrarPorPlataforma = () => {
       botones.forEach((b) => b.classList.remove("active"));
       boton.classList.add("active");
       //luego se obtienen todos lo items
-      const items = document.querySelectorAll(".item");
+      const items = document.querySelectorAll(".item-act");
       //se desaparecen los item si no son de la plataforma seleccionada
       items.forEach((item) => {
         const plataforma = item.getAttribute("data-plataforma");

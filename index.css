@@ -59,9 +59,7 @@
   border-radius: 100px;
 }
 
-.vanish{
-  display:none;
-}
+
 /*
 keyframe permite definir animaciones
 se declaran estados para la clase que tendra la animacion en % de la duracion de la animacion
@@ -132,4 +130,7 @@ la duracion de la animacion esta difinida por animation-duration
   gap:6px; 
   font-size:.9rem; 
   color:#4a5568; 
+}
+.vanish{
+  display:none;
 }
