@@ -42,21 +42,46 @@
   flex: 1;
   background-color: #ffffff;
   margin: 1px;
-  border: 1px solid #fcd3d3c6;
   border-radius: 100px;
   transition: all 0.3s ease;
 }
 
+.plataform-button.xbox {
+  border: 2px solid #107c10;
+}
+
+.plataform-button.playstation {
+  border: 2px solid #003087;
+}
+
+.plataform-button.pc {
+  border: 2px solid #171d25;
+}
+
 .plataform-button:hover {
-  background-color: #504e4a;
+    background-color: #f0f0f0;
 }
 
 .plataform-button.active {
   flex: 1;
-  background-color: #5d7bcc;
   margin: 1px;
   border: none;
   border-radius: 100px;
+}
+
+.plataform-button.active.xbox {
+  background-color: #107c10;
+  color: #ffffff;
+}
+
+.plataform-button.active.playstation {
+  background-color: #003087;
+  color: #ffffff;
+}
+
+.plataform-button.active.pc {
+  background-color: #171d25;
+  color: #ffffff;
 }
 
 /*

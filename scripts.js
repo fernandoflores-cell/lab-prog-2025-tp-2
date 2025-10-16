@@ -382,9 +382,6 @@ async function renderizarItemSeleccionado() {
   if (btnInicial) btnInicial.click();
 }
 
-// para que se cargue el scripto despues de que se cargo el html
-//NO ES NECESARIA ESTA LINEA, por que lo usamos al final
-/* document.addEventListener("DOMContentLoaded", renderizarItemSeleccionado); */
 const mostrarResultadosBusqueda = async () => {
   const items = await fetch("items.json").then((res) => res.json());
 
