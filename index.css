@@ -69,6 +69,7 @@
   border-radius: 100px;
 }
 
+
 .plataform-button.active.xbox {
   background-color: #107c10;
   color: #ffffff;
@@ -154,4 +155,7 @@ la duracion de la animacion esta difinida por animation-duration
   gap:6px; 
   font-size:.9rem; 
   color:#4a5568; 
+}
+.vanish{
+  display:none;
 }

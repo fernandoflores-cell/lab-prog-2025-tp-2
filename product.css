@@ -1,5 +1,4 @@
 .item-background {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +13,7 @@
   max-width: 1200px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   padding: 40px 32px;
 }
 
@@ -60,7 +59,7 @@
   transition: all 0.2s ease;
 }
 .button-comprar-ahora {
-  background: linear-gradient(90deg, #5d7bcc 60%, #708993 100%);
+  background: #5d7bcc;
   color: #fff;
 }
 .button-comprar-ahora:hover {
@@ -81,7 +80,6 @@
   padding: 18px 20px;
   color: #3b3831;
   font-size: 1.08rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .item-details h2 {
   color: #5d7bcc;
