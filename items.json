@@ -23,9 +23,9 @@
   {
     "id": "3",
     "nombre": "Tarjeta de regalo Steam 10 USD",
-   "precio": "15000",
+    "precio": "15000",
     "image": "img/steam.jpg",
-    "plataforma":"pc"
+    "plataforma": "pc"
   },
   {
     "id": "4",
@@ -743,84 +743,70 @@
     "plataforma":"playstation"
   },
   {
-    "id": "103",
+    "id": "104",
     "nombre": "Resident Evil 8 Village Steam",
     "precio": "40600",
     "image": "img/re2.avif",
     "plataforma":"pc"
   },
   {
-    "id": "104",
+    "id": "105",
     "nombre": "Resident Evil 8 Village Xbox",
     "precio": "40600",
     "image": "img/re2.avif",
     "plataforma":"xbox"
   },
   {
-    "id": "105",
+    "id": "106",
     "nombre": "Resident Evil 8 Village PS5",
     "precio": "40600",
     "image": "img/re2.avif",
     "plataforma":"playstation"
   },
   {
-    "id": "106",
+    "id": "107",
     "nombre": "R.E.P.O Steam",
     "precio": "8100",
     "image": "img/repo.webp",
     "plataforma":"pc"
   },
   {
-    "id": "107",
+    "id": "108",
     "nombre": "Starfield Steam",
     "precio": "58800",
     "image": "img/starfield.avif",
     "plataforma":"pc"
   },
   {
-    "id": "108",
+    "id": "109",
     "nombre": "Starfield Xbox",
     "precio": "58800",
     "image": "img/starfield.avif",
     "plataforma":"xbox"
   },
   {
-    "id": "109",
+    "id": "110",
     "nombre": "The Last Of Us Part I Steam",
     "precio": "84000",
     "image": "img/tlou1.avif",
     "plataforma":"pc"
   },
   {
-    "id": "110",
+    "id": "111",
     "nombre": "The Last Of Us Part I PS5",
     "precio": "84000",
     "image": "img/tlou1.avif",
     "plataforma":"playstation"
-  },
-  {
-    "id": "111",
-    "nombre": "The Last Of Us Part I Steam",
-    "precio": "84000",
-    "image": "img/tlou1.avif",
-    "plataforma":"pc"
   },
   {
     "id": "112",
-    "nombre": "The Last Of Us Part I PS5",
-    "precio": "84000",
-    "image": "img/tlou1.avif",
-    "plataforma":"playstation"
-  },
-  {
-    "id": "111",
     "nombre": "The Last Of Us Part II Steam",
     "precio": "56000",
     "image": "img/tlou2.avif",
     "plataforma":"pc"
   },
   {
-    "id": "112",
+    "id": "113",
     "nombre": "The Last Of Us Part II PS5",
     "precio": "56000",
     "image": "img/tlou2.avif",
