@@ -59,9 +59,6 @@
   border-radius: 100px;
 }
 
-.vanish{
-  display:none;
-}
 /*
 keyframe permite definir animaciones
 se declaran estados para la clase que tendra la animacion en % de la duracion de la animacion
