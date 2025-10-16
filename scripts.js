@@ -1,9 +1,3 @@
-let productos, carrito;
-const obtenerProductos = async () => {
-  //obtiene los item del archivo y luego lo parsea de json (aca luego va la api del backend)
-  productos = await fetch("items.json").then((res) => res.json());
-  carrito = await fetch("carrito.json").then((res) => res.json());
-};
 const obtenerItems = async () => {
   //obtiene los item del archivo y luego lo parsea de json (aca luego va la api del backend)
   const items = await fetch("items.json").then((res) => res.json());
@@ -52,17 +46,18 @@ const obtenerItems = async () => {
   });
 };
 
-const listarProductosCarrito = async () => {
+const listarProductosCarrito = () => {
+  let precioTotal = 0;
   //obtiene los datos del archivo y luego lo parsea de json (aca luego va la api del backend)
-  await obtenerProductos();
 
   const leftSide = document.getElementById("productos");
   const rightSide = document.getElementById("precios");
 
   //se recorre el arreglo del carrito con un bucle for para darle un id basado en el iterador a cada item en el carrito
-  for (let i = 0; i < carrito.cartItems.length; i++) {
+  const carrito = JSON.parse(localStorage.getItem("carrito"));
+  for (let i = 0; i < carrito.length; i++) {
     //se guarda el producto actual
-    const producto = productos[carrito.cartItems[i].id];
+    const item = carrito[i];
 
     //se crean los elementos que va a contener cada item en el carrito
     const divCartItem = document.createElement("div");
@@ -80,7 +75,7 @@ const listarProductosCarrito = async () => {
 
     //se añaden propiedades a los items
     divCartItem.classList.add("cart-item");
-    divCartItem.id = i;
+    divCartItem.id = item.id;
 
     divCartImageBox.classList.add("cart-item-image-box");
     divCartInfo.classList.add("cart-item-info");
@@ -88,36 +83,35 @@ const listarProductosCarrito = async () => {
     divQuantity.classList.add("cart-item-quantity");
 
     itemImg.classList.add("cart-item-image");
-    itemImg.src = producto.image;
+    itemImg.src = item.image;
 
     paragNombre.classList.add("name");
-    paragNombre.textContent = producto.nombre;
+    paragNombre.textContent = item.nombre;
 
     plusButton.classList.add("quantity-button");
     plusButton.textContent = "+";
     plusButton.addEventListener("click", function () {
-      sumarCantidad(i, 1);
+      sumarCantidad(item.id, 1);
     });
 
     paragQuantityText.classList.add("quantity-text");
-    paragQuantityText.textContent = carrito.cartItems[i].quantity;
+    paragQuantityText.textContent = item.cantidad;
 
     minusButton.classList.add("quantity-button");
     minusButton.textContent = "-";
     minusButton.addEventListener("click", function () {
-      sumarCantidad(i, -1);
+      sumarCantidad(item.id, -1);
     });
 
     paragSubTotal.classList.add("sub-total-text");
-    paragSubTotal.textContent =
-      "$" + producto.precio * carrito.cartItems[i].quantity;
+    paragSubTotal.textContent = "$" + item.precio * item.cantidad;
 
     //temporal hasta que se agregue toda la logica del carro (al ingresar o eliminar items del carro se debe de cambiar este valor)
-    carrito.totalPrice += producto.precio * carrito.cartItems[i].quantity;
+    precioTotal = precioTotal + Number(item.precio) * Number(item.cantidad);
 
     trashButton.classList.add("trash-button");
     trashButton.addEventListener("click", function () {
-      borrarItemCarrito(i);
+      borrarItemCarrito(item.id);
     });
     trashImg.src = "icons/trash.svg";
     trashImg.alt = "eliminar";
@@ -143,180 +137,90 @@ const listarProductosCarrito = async () => {
   //pTotal.classList.add("");
   pTotal.id = "precioTotal";
 
-  pTotal.textContent = "Total: \n$" + carrito.totalPrice;
+  pTotal.textContent = "Total: \n$" + precioTotal;
   buttonBuy.textContent = "Finalizar compra";
 
   rightSide.appendChild(pTotal);
   rightSide.appendChild(buttonBuy);
 };
 
-const buscarEnCarro = (cartId) => {
-  let retorno,
-    i = 0;
-  while (retorno == null && i < carrito.cartItems.length) {
-    if (carrito.cartItems[i].cartId == cartId) {
-      retorno = carrito.cartItems[i];
-    }
-    i++;
+const agregarItemCarrito = () => {
+  //se obtiene el carro del localstorage o se crea uno nuevo si no existe
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  //se obtiene el item del localstorage
+  let item = JSON.parse(localStorage.getItem("item"));
+  //se busca el item en el carrito
+  itemEnCarrito = carrito.find((i) => i.id == item.id);
+  //si el item ya existe en el carrito, se aumenta la cantidad
+  if (itemEnCarrito) {
+    itemEnCarrito.cantidad++;
+  } else {
+    //si el item no existe, se agrega al carrito
+    carrito.push({ ...item, cantidad: 1 });
   }
-  return retorno;
-};
-
-const buscarProducto = (id) => {
-  let retorno,
-    i = 0;
-  while (retorno == null && i < productos.length) {
-    if (productos[i].id == id) {
-      retorno = productos[i];
-    }
-    i++;
-  }
-  return retorno;
+  //se guarda el carrito actualizado en el localstorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 const sumarCantidad = (cartId, value) => {
-  //se buscan los elementos
-  const productoCarrito = buscarEnCarro(cartId);
-  const producto = buscarProducto(productoCarrito.id);
+  const carrito = JSON.parse(localStorage.getItem("carrito"));
+  //se busca el item en el carrito
+  let item = carrito.find((i) => i.id === cartId);
+  console.log(item);
 
   //se obtiene el elemento del html
   const cartItem = document.getElementById(cartId);
 
   //se suma el valor verificando que nunca se pueda dar un valor negativo
-  productoCarrito.quantity += value;
-  if (productoCarrito.quantity < 0) {
-    productoCarrito.quantity = 0;
+  item.cantidad += value;
+  if (item.cantidad <=0) {
+    borrarItemCarrito(cartId);
+    return;
   }
 
   //se actualiza el precio total del carro
-  carrito.totalPrice += producto.precio * value;
+  //nota:'reduce' recorre el arreglo y va acumulando el total
+  precioTotal = carrito.reduce(
+    (total, item) => total + item.precio * item.cantidad,
+    0
+  );
 
   //se actualiza el contenido del texto en el item
   cartItem.getElementsByClassName("quantity-text")[0].textContent =
-    productoCarrito.quantity;
+    item.cantidad;
 
   cartItem.getElementsByClassName("sub-total-text")[0].textContent =
-    "$" + producto.precio * productoCarrito.quantity;
+    "$" + item.precio * item.cantidad;
 
-  document.getElementById("precioTotal").textContent =
-    "Total: \n$" + carrito.totalPrice;
+  document.getElementById("precioTotal").textContent = "Total: $" + precioTotal;
+  //se guarda el carrito actualizado en el localstorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 const borrarItemCarrito = (cartId) => {
-  const productoCarrito = buscarEnCarro(cartId);
-  const producto = buscarProducto(productoCarrito.id);
+  //se obtiene el carrito del localstorage
+  const carrito = JSON.parse(localStorage.getItem("carrito"));
+  //se elimina el item del carrito
+  const indice = carrito.findIndex((i) => i.id === cartId);
+  if (indice > -1) {
+    carrito.splice(indice, 1);
+  }
 
   //se actualiza el precio total del carro
-  carrito.totalPrice -= producto.precio * productoCarrito.quantity;
-  document.getElementById("precioTotal").textContent =
-    "Total: \n$" + carrito.totalPrice;
+  let precioTotal = carrito.reduce(
+    (total, item) => total + item.precio * item.cantidad,
+    0
+  );
 
-  //se filtra el arreglo de items en el carrito segun el cartId proporcionado como parametro
-  carrito.cartItems = carrito.cartItems.filter(function (item) {
-    return item.cartId !== cartId;
-  });
+  document.getElementById("precioTotal").textContent =
+    "Total: \n$" + precioTotal;
   //se busca el item con el cartId en el html y se lo remueve de su padre, actualizando la pagina
   let itemCarrito = document.getElementById(cartId);
   itemCarrito.parentNode.removeChild(document.getElementById(cartId));
+  //se guarda el carrito actualizado en el localstorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
-const agregarItemCarrito = (newId) => {
-  let yaExiste = false,
-    i = 0;
-  while (!yaExiste && i < carrito.cartItems.length) {
-    if (carrito.cartItems[i].id == newId) {
-      console.log("ya existe");
-      yaExiste = true;
-    }
-    i++;
-  }
-
-  if (!yaExiste) {
-    const producto = buscarProducto(newId);
-    const leftSide = document.getElementById("productos");
-
-    let newCartId;
-    if (carrito.cartItems.length > 0) {
-      newCartId = carrito.cartItems[carrito.cartItems.length - 1].cartId + 1;
-    } else {
-      newCartId = 0;
-    }
-    carrito.cartItems.push({ cartId: newCartId, id: newId, quantity: 1 });
-
-    //se crean los elementos que va a contener cada item en el carrito
-    const divCartItem = document.createElement("div");
-    const divCartImageBox = document.createElement("div");
-    const divCartInfo = document.createElement("div");
-    const divQuantity = document.createElement("div");
-    const itemImg = document.createElement("img");
-    const paragNombre = document.createElement("p");
-    const plusButton = document.createElement("button");
-    const paragQuantityText = document.createElement("p");
-    const minusButton = document.createElement("button");
-    const paragSubTotal = document.createElement("p");
-    const trashButton = document.createElement("button");
-    const trashImg = document.createElement("img");
-
-    //se añaden propiedades a los items
-    divCartItem.classList.add("cart-item");
-    divCartItem.id = newCartId;
-
-    divCartImageBox.classList.add("cart-item-image-box");
-    divCartInfo.classList.add("cart-item-info");
-
-    divQuantity.classList.add("cart-item-quantity");
-
-    itemImg.classList.add("cart-item-image");
-    itemImg.src = producto.image;
-
-    paragNombre.classList.add("name");
-    paragNombre.textContent = producto.nombre;
-
-    plusButton.classList.add("quantity-button");
-    plusButton.textContent = "+";
-    plusButton.addEventListener("click", function () {
-      sumarCantidad(newCartId, 1);
-    });
-
-    paragQuantityText.classList.add("quantity-text");
-    paragQuantityText.textContent = 1;
-
-    minusButton.classList.add("quantity-button");
-    minusButton.textContent = "-";
-    minusButton.addEventListener("click", function () {
-      sumarCantidad(newCartId, -1);
-    });
-
-    paragSubTotal.classList.add("sub-total-text");
-    paragSubTotal.textContent = "$" + producto.precio;
-
-    //se actualiza el precio total del carro
-    carrito.totalPrice += producto.precio;
-    document.getElementById("precioTotal").textContent =
-      "Total: \n$" + carrito.totalPrice;
-
-    trashButton.classList.add("trash-button");
-    trashButton.addEventListener("click", function () {
-      borrarItemCarrito(newCartId);
-    });
-    trashImg.src = "icons/trash.svg";
-    trashImg.alt = "eliminar";
-
-    //se agregan los items como hijos de sus respectivos padres
-    leftSide.appendChild(divCartItem);
-    divCartItem.appendChild(divCartImageBox);
-    divCartItem.appendChild(divCartInfo);
-    divCartImageBox.appendChild(itemImg);
-    divCartInfo.appendChild(paragNombre);
-    divCartInfo.appendChild(trashButton);
-    trashButton.appendChild(trashImg);
-    divCartInfo.appendChild(divQuantity);
-    divQuantity.appendChild(plusButton);
-    divQuantity.appendChild(paragQuantityText);
-    divQuantity.appendChild(minusButton);
-    divCartInfo.appendChild(paragSubTotal);
-  }
-};
 
 const filtrarPorPlataforma = () => {
   const botones = document.querySelectorAll(".plataform-button");
@@ -363,7 +267,6 @@ function renderizarItemSeleccionado() {
 }
 */
 
-
 // para extraer el monto en USD del producto, osea del nombre
 const parseMontoUSD = (nombre) => {
   // extrae el número antes de "USD"
@@ -378,40 +281,44 @@ async function renderizarItemSeleccionado() {
   // busco el item que se selecciono en el listado, en el local storage, si no existe corto para prevenir errores
   const itemSel = JSON.parse(localStorage.getItem("item"));
   if (!itemSel) return;
-  
+
   // cargo toda la lista de items que esta en el items.json
-  const items = await fetch("items.json").then(r => r.json());
-  
+  const items = await fetch("items.json").then((r) => r.json());
+
   // Extraigo el nombre del producto sin el monto
   const key = baseKey(itemSel.nombre);
   //Busco todas las variantes del mismo producto, basandonos en el mismo nombre del producto sin el monto
   const variantes = items
-  .filter(it => baseKey(it.nombre) === key && it.plataforma === itemSel.plataforma)
-  .map(it => ({
+    .filter(
+      (it) => baseKey(it.nombre) === key && it.plataforma === itemSel.plataforma
+    )
+    .map((it) => ({
       ...it,
-      precioNum: Number(it.precio),        //extraigo el precio que viene del json como string
+      precioNum: Number(it.precio), //extraigo el precio que viene del json como string
       montoUSD: parseMontoUSD(it.nombre), //extraigo el monto en USD
     }))
     //ordeno las variantes obtenidas por monto en USD
-    .sort((a,b) => a.montoUSD - b.montoUSD);
-    
+    .sort((a, b) => a.montoUSD - b.montoUSD);
+  console.log(variantes);
   // Agrego el contenido al html con el item seleccionado, buscando en el DOM por sus clases y poniendo la informacion del item seleccionado
   const imagen = document.querySelector(".item-image img"); // busco en product.html el primer elemento del DOM que coincida
   imagen.src = itemSel.image;
   imagen.alt = itemSel.nombre;
-  
+
   document.querySelector(".item-title").textContent = itemSel.nombre;
-  document.querySelector(".item-precio-destacado").textContent =
-  `$ ${Number(itemSel.precio).toLocaleString("es-AR")}`;
-  document.querySelector(".item-caracteristicas").textContent = itemSel.plataforma;
+  document.querySelector(".item-precio-destacado").textContent = `$ ${Number(
+    itemSel.precio
+  ).toLocaleString("es-AR")}`;
+  document.querySelector(".item-caracteristicas").textContent =
+    itemSel.plataforma;
   document.querySelector(".item-descripcion").textContent = key; // o lo que quieras mostrar
-  
+
   // --- hago todas las cajitas de montos ---
   const grid = document.getElementById("var-cantidad-cajita");
   // limpio el grid por si habia algo
   grid.innerHTML = "";
   //Para cada variante creo un boton, creando el elemento en memoria
-  variantes.forEach(v => {
+  variantes.forEach((v) => {
     //esto crea en el documento un <button></button>
     const btn = document.createElement("button");
     btn.type = "button";
@@ -425,70 +332,76 @@ async function renderizarItemSeleccionado() {
     //cada vez que se clickee...
     btn.addEventListener("click", () => {
       //veo todos los botones del grid y los marco como no seleccionados
-      grid.querySelectorAll(".estilo-btn").forEach(b => b.setAttribute("aria-selected","false"));
+      grid
+        .querySelectorAll(".estilo-btn")
+        .forEach((b) => b.setAttribute("aria-selected", "false"));
       //marco este boton como seleccionado
-      btn.setAttribute("aria-selected","true");
+      btn.setAttribute("aria-selected", "true");
 
       // actualizar precio y textos con esa variante
-      document.querySelector(".item-precio-destacado").textContent =
-      `$ ${v.precioNum.toLocaleString("es-AR")}`;
+      document.querySelector(
+        ".item-precio-destacado"
+      ).textContent = `$ ${v.precioNum.toLocaleString("es-AR")}`;
       document.querySelector(".item-title").textContent = v.nombre;
       imagen.src = v.image;
       imagen.alt = v.nombre;
-      
+
       // guardo la seleccion en el local storage para que si se agrega al carrito sea con esa variante
       localStorage.setItem("item", JSON.stringify(v));
     });
-//agrego el boton al grid
+    //agrego el boton al grid
     grid.appendChild(btn);
   });
 
   // seleccionar por defecto el monto del item con el que llegaste
   const montoInicial = parseMontoUSD(itemSel.nombre);
   const btnInicial =
-    [...grid.querySelectorAll(".estilo-btn")].find(b => Number(b.dataset.monto) === montoInicial)
-    || grid.querySelector(".estilo-btn");
-    //si no lo encuentro, selecciono el primero
+    [...grid.querySelectorAll(".estilo-btn")].find(
+      (b) => Number(b.dataset.monto) === montoInicial
+    ) || grid.querySelector(".estilo-btn");
+  //si no lo encuentro, selecciono el primero
   if (btnInicial) btnInicial.click();
 }
 
 // para que se cargue el scripto despues de que se cargo el html
 //NO ES NECESARIA ESTA LINEA, por que lo usamos al final
 /* document.addEventListener("DOMContentLoaded", renderizarItemSeleccionado); */
-const mostrarResultadosBusqueda = async()=>{
-  const items = await fetch("items.json").then(res=>res.json());
-  
+const mostrarResultadosBusqueda = async () => {
+  const items = await fetch("items.json").then((res) => res.json());
+
   const input = document.getElementById("nav-input");
   const listaResultados = document.getElementById("search-results-container");
-   
+
   //oculta los resultados al hacer click fuera del input
-  document.addEventListener("click", (e)=>{
-    if(e.target !== input){
+  document.addEventListener("click", (e) => {
+    if (e.target !== input) {
       listaResultados.style.display = "none";
-    }else{
+    } else {
       listaResultados.style.display = "block";
     }
   });
 
   console.log(items);
   //se obtiene el valor del input cada vez que se escribe algo
-  input.addEventListener("input", ()=>{
+  input.addEventListener("input", () => {
     const valueInput = input.value.toLowerCase();
     console.log(valueInput);
 
     //no se muestran resultados si el input esta vacio
-    if(valueInput.length === 0){
+    if (valueInput.length === 0) {
       listaResultados.style.display = "none";
-    } else{
+    } else {
       listaResultados.style.display = "block";
     }
     //se limpia la lista de resultados antes de mostrar los nuevos resultados
     listaResultados.innerHTML = "";
-    
+
     //se filtran los items que coincidan con el valor del input
-    const resultados = items.filter(item => item.nombre.toLowerCase().includes(valueInput));
+    const resultados = items.filter((item) =>
+      item.nombre.toLowerCase().includes(valueInput)
+    );
     //luego, por cada item que coincida, se crea un html y se agrega a la lista de resultados
-    resultados.forEach(item => {
+    resultados.forEach((item) => {
       const div = document.createElement("div");
       div.classList.add("result-item");
       const img = document.createElement("img");
@@ -500,11 +413,11 @@ const mostrarResultadosBusqueda = async()=>{
       nombre.classList.add("result-name");
       div.appendChild(img);
       div.appendChild(nombre);
-      div.addEventListener("click", ()=>{
+      div.addEventListener("click", () => {
         localStorage.setItem("item", JSON.stringify(item));
         window.location.href = "product.html";
       });
       listaResultados.appendChild(div);
     });
   });
-}
+};
