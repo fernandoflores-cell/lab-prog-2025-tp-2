@@ -337,6 +337,7 @@ async function renderizarItemSeleccionado() {
   // limpio el grid por si habia algo
   grid.innerHTML = "";
   //Para cada variante creo un boton, creando el elemento en memoria
+  if (variantes.length > 1) {
   variantes.forEach((v) => {
     //esto crea en el documento un <button></button>
     const btn = document.createElement("button");
@@ -371,7 +372,11 @@ async function renderizarItemSeleccionado() {
     //agrego el boton al grid
     grid.appendChild(btn);
   });
-
+  }else{
+    //si es un item sin variantes, oculto el texto
+    const textoVariante = document.querySelector(".texto-variantes");
+    textoVariante.style.display = "none";
+  }
   // seleccionar por defecto el monto del item con el que llegaste
   const montoInicial = parseMontoUSD(itemSel.nombre);
   const btnInicial =
