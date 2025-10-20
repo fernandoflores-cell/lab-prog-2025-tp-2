@@ -23,6 +23,7 @@ const obtenerItems = async () => {
     const img = document.createElement("img");
     //esto es para indicar que la imagen que contendra la etiqueta es la del .json
     img.src = item.image;
+    img.alt = item.nombre; //el alt para la imagen
     img.classList.add("item-imagen");
     fotoCont.appendChild(img);
     //etiqueta que contendra el texto del nombre y el precio
@@ -103,6 +104,7 @@ const listarProductosCarrito = () => {
 
     itemImg.classList.add("cart-item-image");
     itemImg.src = item.image;
+    itemImg.alt = item.nombre; //el alt para la imagen
 
     paragNombre.classList.add("name");
     paragNombre.textContent = item.nombre;
@@ -263,28 +265,6 @@ const filtrarPorPlataforma = () => {
     });
   });
 };
-/* funcion vieja
-//function porque con const () => no se porque no anda
-function renderizarItemSeleccionado() {
-  //toma el item guardado en el local storage
-  const item = JSON.parse(localStorage.getItem("item"));
-  //luego agrega el contenido en el html
-  const imagen = document.querySelector(".item-image img");
-  imagen.src = item.image;
-  imagen.alt = item.nombre;
-
-  const titulo = document.querySelector(".item-title");
-  titulo.textContent = item.nombre;
-
-  const precio = document.querySelector(".item-precio-destacado");
-  precio.textContent = `$ ${item.precio}`;
-
-  const carac = document.querySelector(".item-caracteristicas");
-  carac.textContent = `${item.plataforma}`;
-  const desc = document.querySelector(".item-descripcion");
-  desc.textContent = `${item.nombre}`;
-}
-*/
 
 // para extraer el monto en USD del producto, osea del nombre
 const parseMontoUSD = (nombre) => {

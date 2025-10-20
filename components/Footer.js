@@ -3,7 +3,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `<footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h3 class="footer-section-title">¿¿¿</h3>
+          <h3 class="footer-section-title">P2P - Pay To Play</h3>
           <p>¿descripcion de la tienda?</p>
         </div>
         <div class="footer-section">
