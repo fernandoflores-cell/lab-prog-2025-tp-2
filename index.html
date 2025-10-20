@@ -16,23 +16,22 @@
     />
     <script src="scripts.js"></script>
     <script src="components/Header.js"></script>
-    <title>Home</title>
+    <script src="components/Footer.js"></script>
+    <title>P2P</title>
   </head>
   <body>
     <!--Cabecera-->
     <app-header/>
     <main>
-      <!--Contenido de prueba inicio-->
         <div class="plataform-button-group">
-          <button class="plataform-button pc" id="pc">Steam</button>
+          <button class="plataform-button pc" id="pc">PC</button>
           <button class="plataform-button playstation" id="playstation">Playstation</button>
           <button class="plataform-button xbox" id="xbox">Xbox</button>
-        </div>
+        </div> 
         <div  id="items" class="section-content">
-
         </div>
-      <!--Contenido de prueba fin-->
     </main>
+    <app-footer></app-footer>
     <script>
       obtenerItems();
       filtrarPorPlataforma();

@@ -23,6 +23,7 @@ const obtenerItems = async () => {
     const img = document.createElement("img");
     //esto es para indicar que la imagen que contendra la etiqueta es la del .json
     img.src = item.image;
+    img.alt = item.nombre; //el alt para la imagen
     img.classList.add("item-imagen");
     fotoCont.appendChild(img);
     //etiqueta que contendra el texto del nombre y el precio
@@ -103,6 +104,7 @@ const listarProductosCarrito = () => {
 
     itemImg.classList.add("cart-item-image");
     itemImg.src = item.image;
+    itemImg.alt = item.nombre; //el alt para la imagen
 
     paragNombre.classList.add("name");
     paragNombre.textContent = item.nombre;
@@ -153,7 +155,7 @@ const listarProductosCarrito = () => {
   const pTotal = document.createElement("p");
   const buttonBuy = document.createElement("button");
 
-  //pTotal.classList.add("");
+  pTotal.classList.add("precioTotal");
   pTotal.id = "precioTotal";
 
   pTotal.textContent = "Total: \n$" + precioTotal;
@@ -179,6 +181,12 @@ const agregarItemCarrito = () => {
   }
   //se guarda el carrito actualizado en el localstorage
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  //animacion de carrito
+  const iconoCarrito = document.querySelector(".nav-carrito-icon");
+  if (iconoCarrito) {
+  iconoCarrito.classList.add("animar");
+  setTimeout(() => iconoCarrito.classList.remove("animar"), 450);
+}
 };
 
 const sumarCantidad = (cartId, value) => {
@@ -263,28 +271,6 @@ const filtrarPorPlataforma = () => {
     });
   });
 };
-/* funcion vieja
-//function porque con const () => no se porque no anda
-function renderizarItemSeleccionado() {
-  //toma el item guardado en el local storage
-  const item = JSON.parse(localStorage.getItem("item"));
-  //luego agrega el contenido en el html
-  const imagen = document.querySelector(".item-image img");
-  imagen.src = item.image;
-  imagen.alt = item.nombre;
-
-  const titulo = document.querySelector(".item-title");
-  titulo.textContent = item.nombre;
-
-  const precio = document.querySelector(".item-precio-destacado");
-  precio.textContent = `$ ${item.precio}`;
-
-  const carac = document.querySelector(".item-caracteristicas");
-  carac.textContent = `${item.plataforma}`;
-  const desc = document.querySelector(".item-descripcion");
-  desc.textContent = `${item.nombre}`;
-}
-*/
 
 // para extraer el monto en USD del producto, osea del nombre
 const parseMontoUSD = (nombre) => {
@@ -337,6 +323,7 @@ async function renderizarItemSeleccionado() {
   // limpio el grid por si habia algo
   grid.innerHTML = "";
   //Para cada variante creo un boton, creando el elemento en memoria
+  if (variantes.length > 1) {
   variantes.forEach((v) => {
     //esto crea en el documento un <button></button>
     const btn = document.createElement("button");
@@ -371,7 +358,11 @@ async function renderizarItemSeleccionado() {
     //agrego el boton al grid
     grid.appendChild(btn);
   });
-
+  }else{
+    //si es un item sin variantes, oculto el texto
+    const textoVariante = document.querySelector(".texto-variantes");
+    textoVariante.style.display = "none";
+  }
   // seleccionar por defecto el monto del item con el que llegaste
   const montoInicial = parseMontoUSD(itemSel.nombre);
   const btnInicial =

@@ -1,5 +1,4 @@
 .item-background {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +13,7 @@
   max-width: 1200px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   padding: 40px 32px;
 }
 
@@ -60,7 +59,7 @@
   transition: all 0.2s ease;
 }
 .button-comprar-ahora {
-  background: linear-gradient(90deg, #5d7bcc 60%, #708993 100%);
+  background: #5d7bcc;
   color: #fff;
 }
 .button-comprar-ahora:hover {
@@ -81,11 +80,22 @@
   padding: 18px 20px;
   color: #3b3831;
   font-size: 1.08rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .item-details h2 {
   color: #5d7bcc;
   margin: 12px 0 6px 0;
   font-size: 1.2rem;
 }
-
+/* @keyframes hace que el elemento, en nuestro caso el carrito gire y vuelve a su estado inicial */
+@keyframes vibrar {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(12deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(6deg); }
+  80% { transform: rotate(-4deg); }
+}
+/*aplica la animacion al icono del carrito*/
+.nav-carrito-icon.animar {
+  animation: vibrar 0.45s ease;
+  transform-origin: 60% 50%;
+}
