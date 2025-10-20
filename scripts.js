@@ -181,6 +181,12 @@ const agregarItemCarrito = () => {
   }
   //se guarda el carrito actualizado en el localstorage
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  //animacion de carrito
+  const iconoCarrito = document.querySelector(".nav-carrito-icon");
+  if (iconoCarrito) {
+  iconoCarrito.classList.add("animar");
+  setTimeout(() => iconoCarrito.classList.remove("animar"), 450);
+}
 };
 
 const sumarCantidad = (cartId, value) => {

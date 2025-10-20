@@ -86,4 +86,16 @@
   margin: 12px 0 6px 0;
   font-size: 1.2rem;
 }
-
+/* @keyframes hace que el elemento, en nuestro caso el carrito gire y vuelve a su estado inicial */
+@keyframes vibrar {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(12deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(6deg); }
+  80% { transform: rotate(-4deg); }
+}
+/*aplica la animacion al icono del carrito*/
+.nav-carrito-icon.animar {
+  animation: vibrar 0.45s ease;
+  transform-origin: 60% 50%;
+}
